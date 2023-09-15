@@ -13,7 +13,7 @@ class Star(models.Model):
         return self.name
     
 class Author(models.Model):
-    name = models.CharField(max_length=300, null = True)
+    name = models.CharField(max_length=300)
     
     
     def __str__(self) -> str:
