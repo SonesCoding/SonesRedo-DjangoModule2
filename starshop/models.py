@@ -23,9 +23,10 @@ class Author(models.Model):
 class Quote(models.Model):
     name = models.CharField(max_length=50)
     Qtext = models.TextField()
-    Author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    Author = models.ManyToManyField(Author)
     
-    
+    def __str__(self) -> str:
+        return self.name
 
 """
         Sirius, 50.00, Blue
